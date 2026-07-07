@@ -2,7 +2,14 @@
 
 ## AI Usage
 
-I used ChatGPT/Claude to help with codebase orientation and debugging. I asked for explanations of unfamiliar service functions, call chains, and edge cases after I had already located relevant files myself. I verified AI suggestions by reading the code, reproducing bugs manually, and testing behavior before committing fixes.
+I used ChatGPT throughout this project primarily as a code comprehension and debugging assistant rather than as a code generator.
+
+During codebase orientation, I used ChatGPT to help map the overall project structure and understand how requests flowed through the application. It helped me identify the roles of the Flask routes, service layer, models, and seed data so I could navigate the codebase more efficiently.
+
+During debugging, I first reproduced each bug and traced the relevant call chain myself before asking ChatGPT targeted questions about code I had already located. For example, I asked ChatGPT to compare the structure of `rate_song()` and `add_to_playlist()` to understand why one generated notifications and the other did not. For the playlist issue, I asked about the behavior of Python list slicing (`songs[:-1]`) after identifying the suspicious return statement. For the streak issue, I asked about how `datetime.weekday()` works and confirmed that Sunday is represented by `6`.
+
+I also used ChatGPT to review my root cause analyses and suggest improvements to make them more precise and better aligned with the assignment rubric. In every case, I verified AI suggestions by reading the code myself, reproducing the bug, making the smallest possible change, and rerunning the test suite before committing each fix. I did not rely on AI to identify bugs without first investigating the relevant code myself.
+
 
 ## Codebase Map
 
